@@ -99,15 +99,15 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-primary" />
-                <span className="text-sm text-muted-foreground">+1 (555) 123-4567</span>
+                <span className="text-sm text-muted-foreground">8763082186</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <span className="text-sm text-muted-foreground">support@eldercare.com</span>
+                <span className="text-sm text-muted-foreground">subhasourabha143@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-sm text-muted-foreground">123 Healthcare Ave, City, State 12345</span>
+                <span className="text-sm text-muted-foreground">vssut burla,sambalpur 768018</span>
               </div>
             </div>
           </div>
@@ -191,7 +191,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-sm text-muted-foreground mb-4 md:mb-0">
-            © 2024 ElderCare+. All rights reserved. | Designed with ❤️ for Senior Citizens
+            © 2025 ElderCare+. All rights reserved. | Designed with ❤️ by THE ACERS.
           </div>
           
           {/* Social Links */}
