@@ -18,14 +18,12 @@ export function Navigation() {
   const navItems = [
     { label: "Home", href: "#home" },
     { label: "Features", href: "#features" },
-    { label: "About", href: "#about" },
     { label: "Contact", href: "#contact" }
   ]
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
-      isScrolled ? 'glass-effect shadow-lg' : 'bg-transparent'
-    }`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${isScrolled ? 'glass-effect shadow-lg' : 'bg-transparent'
+      }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -37,8 +35,8 @@ export function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          <div className="hidden md:flex flex-1 justify-center">
+            <div className="flex items-center space-x-8">
               {navItems.map((item) => (
                 <a
                   key={item.label}
@@ -50,6 +48,7 @@ export function Navigation() {
               ))}
             </div>
           </div>
+
 
           {/* Right side buttons */}
           <div className="hidden md:flex items-center space-x-4">
