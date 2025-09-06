@@ -101,7 +101,6 @@ export default function HelperRemindersDemo() {
           </Link>
           <div>
             <h1 className="text-2xl font-bold">Senior Helper Reminders</h1>
-            <p className="text-muted-foreground">Bhubaneswar Demo</p>
           </div>
         </div>
 

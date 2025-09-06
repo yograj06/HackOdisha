@@ -134,7 +134,7 @@ export default function OrderingDemo() {
               <div>
                 <h1 className="text-2xl font-bold flex items-center">
                   <ShoppingCart className="w-6 h-6 mr-2 text-primary" />
-                  Medicine Ordering Demo
+                  Medicine Ordering
                 </h1>
                 <p className="text-muted-foreground">Order medicines from trusted pharmacy partners</p>
               </div>
@@ -358,24 +358,6 @@ export default function OrderingDemo() {
                     </div>
                   </div>
                 )}
-              </CardContent>
-            </Card>
-
-            {/* Demo Info */}
-            <Card className="mt-6 bg-primary/5 border-primary/20">
-              <CardContent className="pt-6">
-                <div className="text-center">
-                  <h3 className="font-semibold mb-2">🎯 Demo Features</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Full e-commerce experience with search, filters, cart management, and checkout.
-                  </p>
-                  <div className="flex flex-wrap gap-1 justify-center">
-                    <Badge variant="secondary" className="text-xs">Search & Filter</Badge>
-                    <Badge variant="secondary" className="text-xs">Cart Management</Badge>
-                    <Badge variant="secondary" className="text-xs">Real-time Updates</Badge>
-                    <Badge variant="secondary" className="text-xs">Responsive Design</Badge>
-                  </div>
-                </div>
               </CardContent>
             </Card>
           </div>

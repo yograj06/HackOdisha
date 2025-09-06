@@ -144,7 +144,6 @@ export default function SOSDemo() {
             </Link>
             <div>
               <h1 className="text-2xl font-bold">Emergency SOS</h1>
-              <p className="text-muted-foreground">Bhubaneswar Demo</p>
             </div>
           </div>
           <Link to="/demo/sos/contacts">

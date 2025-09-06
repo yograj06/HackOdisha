@@ -75,7 +75,7 @@ export default function ScheduleDemo() {
               <div>
                 <h1 className="text-2xl font-bold flex items-center">
                   <Calendar className="w-6 h-6 mr-2 text-primary" />
-                  Doctor Schedule Demo
+                  Doctor Schedule
                 </h1>
                 <p className="text-muted-foreground">Manage your medical appointments</p>
               </div>
@@ -236,25 +236,6 @@ export default function ScheduleDemo() {
                     </div>
                   </div>
                 ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Demo Info */}
-          <Card className="bg-primary/5 border-primary/20">
-            <CardContent className="pt-6">
-              <div className="text-center">
-                <h3 className="font-semibold mb-2">🎯 Demo Features</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  This demo shows appointment management with form handling. 
-                  Try adding a new appointment to see the interactive features.
-                </p>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  <Badge variant="secondary">Form Validation</Badge>
-                  <Badge variant="secondary">Real-time Updates</Badge>
-                  <Badge variant="secondary">Status Tracking</Badge>
-                  <Badge variant="secondary">Responsive Design</Badge>
-                </div>
               </div>
             </CardContent>
           </Card>

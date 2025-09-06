@@ -48,7 +48,7 @@ export default function RemindersDemo() {
               <div>
                 <h1 className="text-2xl font-bold flex items-center">
                   <Pill className="w-6 h-6 mr-2 text-primary" />
-                  Medicine Reminders Demo
+                  Medicine Reminders
                 </h1>
                 <p className="text-muted-foreground">Interactive medication tracking system</p>
               </div>
@@ -129,25 +129,6 @@ export default function RemindersDemo() {
                     </Button>
                   </div>
                 ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Demo Info */}
-          <Card className="bg-primary/5 border-primary/20">
-            <CardContent className="pt-6">
-              <div className="text-center">
-                <h3 className="font-semibold mb-2">🎯 Demo Features</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  This demo shows medication reminders with interactive tracking. 
-                  Click "Mark Taken" to track your medications and see real-time updates.
-                </p>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  <Badge variant="secondary">Real-time Updates</Badge>
-                  <Badge variant="secondary">Urgent Notifications</Badge>
-                  <Badge variant="secondary">Progress Tracking</Badge>
-                  <Badge variant="secondary">Toast Notifications</Badge>
-                </div>
               </div>
             </CardContent>
           </Card>
