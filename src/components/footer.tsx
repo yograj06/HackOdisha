@@ -96,7 +96,7 @@ export function Footer() {
             </p>
 
             {/* Contact Info */}
-            <div className="space-y-3">
+            <div id = "contact" className="space-y-3 scroll-mt-24">
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-primary" />
                 <span className="text-sm text-muted-foreground">8763082186</span>
