@@ -54,37 +54,37 @@ export default function GoogleMap({
 
       mapInstanceRef.current = map;
 
-      // // Get user location
-      // if (navigator.geolocation) {
-      //   navigator.geolocation.getCurrentPosition(
-      //     (position) => {
-      //       const userPos = {
-      //         lat: position.coords.latitude,
-      //         lng: position.coords.longitude
-      //       };
-      //       setUserLocation(userPos);
+      // Get user location
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const userPos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            setUserLocation(userPos);
 
-      //       // Add user location marker
-      //       new google.maps.Marker({
-      //         position: userPos,
-      //         map,
-      //         title: 'Your Location',
-      //         icon: {
-      //           url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
-      //             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      //               <circle cx="12" cy="12" r="8" fill="#3b82f6" stroke="#ffffff" stroke-width="3"/>
-      //               <circle cx="12" cy="12" r="3" fill="#ffffff"/>
-      //             </svg>
-      //           `),
-      //           scaledSize: new google.maps.Size(24, 24)
-      //         }
-      //       });
-      //     },
-      //     () => {
-      //       console.log('Geolocation denied, using default center');
-      //     }
-      //   );
-      // }
+            // Add user location marker
+            new google.maps.Marker({
+              position: userPos,
+              map,
+              title: 'Your Location',
+              icon: {
+                url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="8" fill="#3b82f6" stroke="#ffffff" stroke-width="3"/>
+                    <circle cx="12" cy="12" r="3" fill="#ffffff"/>
+                  </svg>
+                `),
+                scaledSize: new google.maps.Size(24, 24)
+              }
+            });
+          },
+          () => {
+            console.log('Geolocation denied, using default center');
+          }
+        );
+      }
 
       // Add hospital markers
       hospitals.forEach((hospital) => {
