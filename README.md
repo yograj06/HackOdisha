@@ -71,15 +71,11 @@ AI Assistant for smart reminders and guidance
 
 Frontend: React.js, Tailwind CSS, shadcn/ui for UI components
 
-Backend: Node.js / Express.js (API handling, scheduling, authentication)
-
-Database: MongoDB (NoSQL for flexibility in health + user data)
-
 Maps Integration: Google Maps API / Leaflet.js (location-based services)
 
 AI & Alerts: Python (Flask/FastAPI) + Twilio/Email APIs for reminders and SOS
 
-Hosting/Deployment: Vercel (Frontend), Render/Heroku (Backend)
+Hosting/Deployment: Netlify (Frontend)
 
 
 
