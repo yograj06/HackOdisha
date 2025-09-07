@@ -88,7 +88,7 @@ export default function MedicalMapDemo() {
           <div className="lg:col-span-2">
             <Card>
               <CardHeader>
-                <CardTitle>Interactive Map (Open map in full screen)</CardTitle>
+                <CardTitle>Interactive Map</CardTitle>
                 <p className="text-sm text-muted-foreground">
                   🔴 Red markers: Hospitals • 🟢 Green markers: Pharmacies • 🔵 Blue marker: Your location
                 </p>
@@ -142,13 +142,13 @@ export default function MedicalMapDemo() {
                         {hospital.phone && (
                           <Button size="sm" variant="outline" className="text-xs h-7">
                             <Phone className="w-3 h-3 mr-1" />
-                            <a href={`tel:${hospital.phone}`}>Call</a>
+                            <a href={tel:${hospital.phone}}>Call</a>
                           </Button>
                         )}
                         <Button size="sm" variant="outline" className="text-xs h-7">
                           <Navigation className="w-3 h-3 mr-1" />
                           <a
-                            href={`https://maps.google.com/?q=${hospital.lat},${hospital.lng}`}
+                            href={https://maps.google.com/?q=${hospital.lat},${hospital.lng}}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
@@ -200,13 +200,13 @@ export default function MedicalMapDemo() {
                         {pharmacy.phone && (
                           <Button size="sm" variant="outline" className="text-xs h-7">
                             <Phone className="w-3 h-3 mr-1" />
-                            <a href={`tel:${pharmacy.phone}`}>Call</a>
+                            <a href={tel:${pharmacy.phone}}>Call</a>
                           </Button>
                         )}
                         <Button size="sm" variant="outline" className="text-xs h-7">
                           <Navigation className="w-3 h-3 mr-1" />
                           <a
-                            href={`https://maps.google.com/?q=${pharmacy.lat},${pharmacy.lng}`}
+                            href={https://maps.google.com/?q=${pharmacy.lat},${pharmacy.lng}}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
