@@ -1,4 +1,4 @@
-ElderCare+ 👵👴💙
+ElderCare+ 💙
 
 Your Complete Senior Care Companion
 
