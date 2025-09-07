@@ -113,9 +113,9 @@ export default function GoogleMap({
               <p class="text-xs text-gray-600">${hospital.type}</p>
               <p class="text-xs mt-1">${hospital.address}</p>
               <p class="text-xs font-medium mt-1">Distance: ${distance.toFixed(1)} km</p>
-              ${hospital.phone ? <p class="text-xs mt-1">📞 ${hospital.phone}</p> : ''}
+              ${hospital.phone ? `<p class="text-xs mt-1">📞 ${hospital.phone}</p>` : ''}
               <div class="mt-2">
-                <button onclick="window.open('tel:${hospital.phone}')" class="text-xs bg-red-500 text-white px-2 py-1 rounded mr-1">Call</button>
+                ${hospital.phone ? `<button onclick="window.open('tel:${hospital.phone}')" class="text-xs bg-red-500 text-white px-2 py-1 rounded mr-1">Call</button>` : ''}
                 <button onclick="window.open('https://maps.google.com/?q=${hospital.lat},${hospital.lng}')" class="text-xs bg-blue-500 text-white px-2 py-1 rounded">Directions</button>
               </div>
             </div>
@@ -156,9 +156,9 @@ export default function GoogleMap({
               <p class="text-xs mt-1">${pharmacy.address}</p>
               <p class="text-xs font-medium mt-1">Distance: ${distance.toFixed(1)} km</p>
               <p class="text-xs mt-1">🕒 ${pharmacy.hours}</p>
-              ${pharmacy.phone ? <p class="text-xs mt-1">📞 ${pharmacy.phone}</p> : ''}
+              ${pharmacy.phone ? `<p class="text-xs mt-1">📞 ${pharmacy.phone}</p>` : ''}
               <div class="mt-2">
-                <button onclick="window.open('tel:${pharmacy.phone}')" class="text-xs bg-green-500 text-white px-2 py-1 rounded mr-1">Call</button>
+                ${pharmacy.phone ? `<button onclick="window.open('tel:${pharmacy.phone}')" class="text-xs bg-green-500 text-white px-2 py-1 rounded mr-1">Call</button>` : ''}
                 <button onclick="window.open('https://maps.google.com/?q=${pharmacy.lat},${pharmacy.lng}')" class="text-xs bg-blue-500 text-white px-2 py-1 rounded">Directions</button>
               </div>
             </div>
