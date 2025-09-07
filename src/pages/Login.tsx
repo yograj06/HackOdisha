@@ -17,7 +17,7 @@ const loginSchema = z.object({
 
 type LoginForm = z.infer<typeof loginSchema>;
 
-// ✅ Allowed users (hidden from frontend, only checked in code)
+// ✅ Updated allowed users
 const ALLOWED_USERS = [
   { email: 'arman98@gmail.com', password: 'arman123' },
   { email: 'joelpur18@gmail.com', password: 'joel123' },
@@ -41,7 +41,7 @@ const Login = () => {
     resolver: zodResolver(loginSchema),
   });
 
-  // ✅ Custom submit handler with fixed credentials
+  // ✅ Custom submit handler with validation
   const onSubmit = async (data: LoginForm) => {
     setIsLoading(true);
 
@@ -134,6 +134,16 @@ const Login = () => {
                 {isLoading ? 'Signing In...' : 'Sign In'}
               </Button>
             </form>
+
+            {/* ✅ Updated demo credentials */}
+            <div className="text-center text-sm text-muted-foreground space-y-1">
+              <p>Use one of these :</p>
+              <ul className="inline-block text-left">
+                <li>arman98@gmail.com / arman123</li>
+                <li>joelpur18@gmail.com / joel123</li>
+                <li>rajveerpandit23@gmail.com / rajveer31</li>
+              </ul>
+            </div>
           </div>
         </Card>
       </div>
