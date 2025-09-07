@@ -100,7 +100,7 @@ export default function OrderingDemo() {
 
     toast({
       title: "🎉 Order Placed Successfully!",
-      description: `Order total: ${formatPrice(cartTotal)} - Delivery in 2-3 business days`,
+      description: `Order total: ${formatPrice(cartTotal)} - Delivery in 2-3 hours`,
     })
     setCart([])
   }
