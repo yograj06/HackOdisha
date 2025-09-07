@@ -9,12 +9,20 @@ import { Input } from '@/components/ui/input';
 import { Card } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 
+// ✅ Schema for form validation
 const loginSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
   password: z.string().min(6, 'Password must be at least 6 characters'),
 });
 
 type LoginForm = z.infer<typeof loginSchema>;
+
+// ✅ Allowed users (hidden from frontend, only checked in code)
+const ALLOWED_USERS = [
+  { email: 'arman98@gmail.com', password: 'arman123' },
+  { email: 'joelpur18@gmail.com', password: 'joel123' },
+  { email: 'rajveerpandit23@gmail.com', password: 'rajveer31' },
+] as const;
 
 const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -33,43 +41,56 @@ const Login = () => {
     resolver: zodResolver(loginSchema),
   });
 
+  // ✅ Custom submit handler with fixed credentials
   const onSubmit = async (data: LoginForm) => {
     setIsLoading(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    login(data.email);
-    toast({
-      title: "Welcome to ElderCare+",
-      description: "You have successfully signed in.",
-    });
-    
-    navigate(from, { replace: true });
-    setIsLoading(false);
+
+    try {
+      // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 500));
+
+      const email = data.email.trim().toLowerCase();
+      const password = data.password;
+
+      const match = ALLOWED_USERS.find(
+        (u) => u.email.toLowerCase() === email && u.password === password
+      );
+
+      if (!match) {
+        toast({
+          title: 'Invalid credentials',
+          description: 'Please use one of the approved Gmail addresses and passwords.',
+          variant: 'destructive',
+        });
+        setIsLoading(false);
+        return;
+      }
+
+      login(email);
+      toast({
+        title: 'Welcome to ElderCare+',
+        description: 'You have successfully signed in.',
+      });
+
+      navigate(from, { replace: true });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <div className="w-full max-w-md space-y-8">
         <div className="text-center">
-          <h1 className="text-4xl font-bold gradient-text mb-2">
-            ElderCare+
-          </h1>
-          <p className="text-muted-foreground">
-            Your Complete Senior Care Companion
-          </p>
+          <h1 className="text-4xl font-bold gradient-text mb-2">ElderCare+</h1>
+          <p className="text-muted-foreground">Your Complete Senior Care Companion</p>
         </div>
 
         <Card className="p-8 card-bg border-border/50 hover-glow">
           <div className="space-y-6">
             <div className="text-center">
-              <h2 className="text-2xl font-semibold text-foreground">
-                Welcome Back
-              </h2>
-              <p className="text-muted-foreground mt-2">
-                Sign in to access your health dashboard
-              </p>
+              <h2 className="text-2xl font-semibold text-foreground">Welcome Back</h2>
+              <p className="text-muted-foreground mt-2">Sign in to access your health dashboard</p>
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
@@ -113,8 +134,6 @@ const Login = () => {
                 {isLoading ? 'Signing In...' : 'Sign In'}
               </Button>
             </form>
-
-           
           </div>
         </Card>
       </div>
