@@ -198,16 +198,7 @@ export function ArchitectureDiagram() {
           )}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center animate-fade-in-up">
-          <p className="text-lg text-muted-foreground mb-6">
-            Experience the power of integrated healthcare management
-          </p>
-          <Button size="lg" className="bg-primary hover:bg-primary-hover text-primary-foreground px-8 py-4 text-lg font-semibold rounded-full hover-glow focus-ring group">
-            Explore Interactive Demo
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-        </div>
+   
       </div>
     </section>
   )
