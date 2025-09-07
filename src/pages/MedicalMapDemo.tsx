@@ -88,7 +88,7 @@ export default function MedicalMapDemo() {
           <div className="lg:col-span-2">
             <Card>
               <CardHeader>
-                <CardTitle>Interactive Map</CardTitle>
+                <CardTitle>Interactive Map (Open map in full screen)</CardTitle>
                 <p className="text-sm text-muted-foreground">
                   🔴 Red markers: Hospitals • 🟢 Green markers: Pharmacies • 🔵 Blue marker: Your location
                 </p>
